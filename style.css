@@ -1,0 +1,99 @@
+/* sidebar */
+.sidebar {width: 256px;margin: 0 46px 0 0;flex: none;}
+.sidebar svg *,.content svg * {fill:none;stroke:#E80024;stroke-width:2.5;}
+.sidebar-menu {margin: 0 0 50px;}
+.sidebar-menu__item {width: 256px;height: 68px;border: 1px solid #c1c1c1;border-radius: 8px;box-sizing: border-box;display: flex;align-items: center;justify-content: flex-start;padding: 0 0 0 15px;margin: 0 0 30px;font-size: 0.8em;cursor: pointer;transition: .3s;}
+.sidebar-menu__item_active, .sidebar-menu__item:hover {border: 1px solid #e80024;background: #f8f8f8;}
+.sidebar-menu__item svg {margin-right: 12px;}
+.sidebar__sponsors {text-align: center;}
+.sidebar__sponsors-link {display: block;margin: 0 0 50px;}
+.sidebar__sponsors-link img {max-width: 90%;}
+
+/* content */
+.main-content_task .main-content__inner {flex-direction: row;padding: var(--padding);box-sizing: border-box;}
+.main-content_task {background-image: url(img/bg_tasks.jpg);background-repeat: no-repeat;background-position: top center;padding: 100px 0 175px;}
+.content__tab {display: none}
+.content__tab_active {display: block;}
+.content__tab h1 {margin-bottom: 50px;}
+.content__tab h2 {font-family: CeraPro-Bold;color: #0c0c0c;font-size: 1.8em;margin: 0 0 35px;}
+.content__text {max-width: 620px;font-size: 0.8em;margin: 0 0 25px;}
+.content__text p {margin: 0 0 20px;line-height: 1.2}
+.content__tab-info {margin: 0 0 45px;color: #0c0c0c;font-family: CeraPro-Medium;font-size: .9em;}
+.content__tab-notice {padding: 25px;border: 1px solid #818181;display: flex;width: 100%;gap:10px;border-radius: 16px;align-items: flex-start;margin: 0 0 35px;box-sizing: border-box;}
+.content__tab-notice svg {flex: none;}
+.content__tab-noticeblock {margin: 7px 0 0;}
+.content__tab-noticeblock h3 {font-size: 1.2em;margin: 0 0 20px;}
+.content__tab-noticeblock p {line-height: 1.2;margin: 0 0 10px;font-size: 0.8em;}
+.content__table {margin: 0 0 50px;}
+.content__table table {font-family: CeraPro-Medium;width: 100%;color: #fff;border-spacing: 0px 10px;}
+.content__table-big {font-size: 0.8em;}
+.content__table-small {font-size: 0.7em;}
+.content__table tr {}
+.content__table th, .content__table td {background: #e80024;text-align: center;padding: 7px 5px}
+.content__table th {border-right: 1px solid #fff;}
+.content__table th:first-child, .content__table td:first-child {border-top-left-radius: 5px;border-bottom-left-radius: 5px;} 
+.content__table th:last-child, .content__table td:last-child {border-top-right-radius: 5px;border-bottom-right-radius: 5px;border-right: 0;}
+.content__table td {background: #e9e9e9;color: #000;}
+.content__table *.content__table-cellbig {width: 450px;text-align: left;padding-left: 30px;} 
+.content__form {}
+.content__form-row {margin: 0 0 25px;}
+.content__form-row p {font-family: CeraPro-Medium;font-size: 0.8em;margin: 0 0 15px;}
+.content__form-row select {max-width: 450px;width: 100%;height: 60px;border: 1px solid #c1c1c1;border-radius: 8px;font-family: CeraPro-Medium;font-size: 0.8em;padding: 0 10px;}
+.content__form-row option {font-family: CeraPro-Medium;}
+.content__form-code {max-width: 450px;width: 100%;height: auto; min-height: 125px;border: 1px solid #c1c1c1;border-radius: 8px;padding: 5px 10px;box-sizing: border-box;background: #fff;}
+.content__form-code code {font-family: CeraPro-Medium;font-size: 0.8em;white-space: pre-wrap;}
+.content__form-file {display: flex;gap:10px;align-items: center;}
+.content__form-file input {position: absolute;z-index: -1;opacity: 0;display: block;width: 0;height: 0;}
+.content__form-filebtn {width: 137px;height: 34px;display: flex;justify-content: center;align-items: center;color:#0c0c0c;font-family: CeraPro-Medium;font-size: 0.8em;background: #e1e1e1;border-radius: 8px;transition: .3s;cursor: pointer}
+.content__form-filebtn:hover {background-color: #e80024;color: #fff;}
+.content__form-filetext {font-family: CeraPro-Medium;font-size: 0.8em}
+.button_competition-participate {width: 100%;max-width: 360px;height: 64px;}
+.button_competition-send {width: 100%;max-width: 460px;height: 68px;border: 0;}
+
+@media all and (max-width:991px) {
+    .main-content_task {padding: 40px 0 15px;background-position: top right -60px;background-size: contain;}
+    .main-content_task .main-content__inner {flex-direction: column;}
+    .sidebar {width: auto;margin: 0;}
+    .sidebar-menu__list {display: flex;flex-wrap: wrap;gap: 10px;justify-content: center;margin: 0 auto;}
+    .sidebar-menu__item {margin: 0;background: rgb(255 255 255 / 60%);height: 40px;font-size: 0.7em;width: 240px;}
+    .sidebar-menu__item_active, .sidebar-menu__item:hover {background: #f8f8f8}
+    .sidebar__sponsors {display: none;}
+    .sidebar-menu {margin: 0 0 35px;}
+    .content__text {max-width: none}
+}
+
+@media all and (max-width:767px) {
+    .sidebar-menu__item {font-size: 0.65em;padding: 0 0 0 5px;width: 200px;}
+    .content__download-link {max-width: 190px;}
+    .content__table-small {font-size: 0.65em;}
+    .content__table *.content__table-cellbig {width: 200px;}
+    .content__tab h2 {font-size: 1.5em;}
+    .content__table {margin: 0 0 40px;}
+}
+
+@media all and (max-width:639px) {
+    .content__table {overflow-x: scroll;scrollbar-color: #e80024 #edecec;scrollbar-width: thin;}
+    .content__table::-webkit-scrollbar-thumb {background: #e80024;border-radius: 100px;border: 3px solid transparent;background-clip: content-box;}
+    .content__table::-webkit-scrollbar-track {background: #edecec;border-radius: 100px;}
+    .content__table::-webkit-scrollbar {height: 12px;}
+    .content__form-row select {height: 35px;}
+    .content__form-row select, .content__form-code {max-width: none;}
+    .button_competition-participate, .button_competition-send {height: 45px;}
+    .content__table *.content__table-cellbig {width: auto;padding-left: 5px;}
+    .main-content_task .sidebar-menu__item {width: 145px;}
+}
+
+@media all and (max-width:479px) {
+    .sidebar-menu__item {width: 163px;height: 37px;}
+    .content__tab-notice {display: block}
+    .content__tab-noticeblock h3 {font-size: 1em;}
+    .content__tab-noticeblock {margin: 10px 0 0;}
+    .content__tab-notice svg {float: left;margin: 0 10px 0 0;}
+    .content__tab-noticeblock p {font-size: 0.75em;}
+    .main-content_task .sidebar-menu__item {width: 100%;}
+    .main-content_task {background-size: 165%;}
+}
+
+@media all and (max-width:359px) {
+   .sidebar-menu__item {width: 143px;}
+}
